@@ -1,0 +1,55 @@
+<html>
+
+<title>Calculator</title>
+
+
+<div style="font-family: 'Lucida Grande', Helvetica, Verdana, Arial, sans-serif;font-size: 15px;line-height: 1.42857143;color: #4c4c4c;">
+
+		<script src="wcalc.js"></script> 
+
+<image src="aristo_logo_c.jpg" height="40px" width="120px"></image>
+<div><b>Aristo Door Size Calculator</b></div>
+<p><b>Unit of Measure:</b>
+	<select id="sel" style="font-size: 15px;" onchange="sqft();">
+		<option id="mm" value="mm" selected>Millimeter(mm)</option>
+		<option id="cm" value="cm">Centimeters(cm)</option>
+		<option id="meter" value="meter">Meters(m)</option>
+		<option id="inch" value="inch" >Inches</option>
+	
+	</select>
+</P>
+<p id="errorMsg" style="color:red;"></p>
+
+
+<P></P>
+<P></P>
+
+<div style="float:left; margin-top:65px;margin-right:8px;">
+<div><b>Height:</b></div>
+<div><input id="inputHeight" style="width:80px;font-size: 15px;" type="number" placeholder="Height" onkeyup="conv();"> </div>
+	<div style="margin-top:10px; display:none" id="outputHeight"></div>
+</div>
+<div style="float:left;">
+<div style="margin-bottom:8px;"><b>Width: </b><input id="inputWidth" type="number" onkeyup="conv();" style="width:80px;font-size: 15px;"  placeholder="Width" >&nbsp;<span style="display:none;" id="outputWidth"></span></div>
+<div style="padding:5px;border:1px solid #000;">
+		<p style="border-bottom: 1px solid #000;padding-bottom:10px;">Panel 1 (%):&nbsp;<input id="percent1" type="number" style="width:80px;font-size: 15px;" placeholder="Ratio 1" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+			maxlength="3" >&nbsp;:&nbsp;<span id="sqFeet"></span></p>
+		<p style="border-bottom: 1px solid #000;padding-bottom:10px;">Panel 2 (%):&nbsp;<input id="percent2" type="number" style="width:80px;font-size: 15px;"  placeholder="Ratio 2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+			maxlength="3">&nbsp;:&nbsp;<span id="sqFeet2"></span></p>
+		<p style="border-bottom: 1px solid #000;padding-bottom:10px;">Panel 3 (%):&nbsp;<input id="percent3" type="number" style="width:80px;font-size: 15px;"  placeholder="Ratio 3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+			maxlength="3">&nbsp;:&nbsp;<span id="sqFeet3"></span></p>
+		<p style="border-bottom: 1px solid #000;padding-bottom:10px;">Panel 4 (%):&nbsp;<input id="percent4" type="number" style="width:80px;font-size: 15px;"  placeholder="Ratio 4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+				maxlength="3">&nbsp;:&nbsp;<span id="sqFeet4"></span></p>
+		<p style="border-bottom: 1px solid #000;padding-bottom:10px;">Panel 5 (%):&nbsp;<input id="percent5" type="number" style="width:80px;font-size: 15px;"  placeholder="Ratio 5" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+					maxlength="3">&nbsp;:&nbsp;<span id="sqFeet5"></span></p>
+		<button onclick="sqft()" style="font-size:15px;background-color: #7c7bad;border-color: #7c7bad;color:#ffffff;cursor: pointer;">Calculate</button> <span style="font-size: 10px; display:none;">(Provide Ratios & Submit)</span>
+</div>
+<div style="margin-top:10px;display:none;"><b>Total Area:</b>&nbsp; <span style="display:none;" id="area"></span></div>
+</div>
+
+<div style="clear:both;"></div>
+
+</div>
+
+
+</html>
