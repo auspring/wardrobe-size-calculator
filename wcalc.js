@@ -193,7 +193,7 @@ function sqft() {
 	document.getElementById("sqFeet5").innerHTML= roundToTwo(sqft5)+"&nbsp;SqFt";
 	
 	if(tp<=99) {
-		document.getElementById("errorMsg").innerHTML = "Error: Sum or Panel % Rations is less than 100";
+		document.getElementById("errorMsg").innerHTML = "Error: Sum or Panel % ratio is less than 100";
 		document.getElementById("sqFeet").innerHTML= "";
 		document.getElementById("sqFeet2").innerHTML= "";
 		document.getElementById("sqFeet3").innerHTML= "";
